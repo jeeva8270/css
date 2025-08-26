@@ -1,0 +1,62 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>jeeva--animations</title>
+<style>
+body {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 700px;
+margin: 0;
+background: darkgreen;
+}
+.box {
+width: 120px;
+height: 120px;
+background: crimson;
+position: relative;
+text-align: center;
+padding: 30px;
+border-style: dotted;
+font-family: Arial, sans-serif;
+animation-name: move;
+animation-duration: 4s;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+animation-timing-function: ease-in-out;
+}
+@keyframes move {
+0%   {
+ left:0;top:0;background:crimson;}
+50%  { 
+left: 150px;top:0;background:orange;}
+100% { 
+left: 150px;top:150px;background:green;}
+    }
+@media (width:600px) {
+body {
+background:lightblue;
+}
+.box {
+width: 80px;
+height: 80px;
+background: purple;
+animation-name: mobileMove;
+animation-duration: 3s;
+}
+@keyframes mobileMove {
+0%   { 
+left: 0;top:0;background:purple; }
+50%  { 
+left: 80px;top:0; background:pink; }
+100% { 
+left: 0;top:80px;background:yellow; }
+}
+}
+</style>
+</head>
+<body>
+<div class="box"><p>jeeva-08/12/2002</p></div>
+</body>
+</html>
