@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple Grid Example</title>
+<style>
+.grid-container {
+ display: grid;
+ grid-template-rows: 100px 100px;
+ grid-template-columns: 150px 150px 150px;
+ grid-template-areas: 
+ "box1 box2 box3"
+  "box4 box5 box6";
+  gap: 10px;
+  }
+
+ .box {
+ background: lightblue;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ font-weight: bold;
+ border: 2px solid #333;
+}
+
+.box1 { grid-area: box1; }
+.box2 { grid-area: box2; }
+.box3 { grid-area: box3; }
+.box4 { grid-area: box4; }
+.box5 { 
+ grid-column-start: 2; 
+ grid-column-end: 4; 
+ grid-row-start: 2; 
+ grid-row-end: 3;
+ background: lightgreen;
+    }
+.box6 { grid-area: box6; }
+</style>
+</head>
+<body>
+<div class="grid-container">
+<div class="box box1">Box 1</div>
+<div class="box box2">Box 2</div>
+<div class="box box3">Box 3</div>
+<div class="box box4">Box 4</div>
+<div class="box box5">Box 5 (Span)</div>
+<div class="box box6">Box 6</div>
+</div>
+</body>
+</html>
